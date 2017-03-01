@@ -28,12 +28,17 @@ int main(){
   std::cout << "program begin" << std::endl << std::endl;
   
   int w = 21, h = 21;
+  string inputW, inputH;
 
   std::cout << "maze width: ";
-  std::cin >> w;
+  std::getline( std::cin, inputW );
+  if( inputW != "" )
+    w = std::stoi( inputW );
 
   std::cout << "maze height: ";
-  std::cin >> h;
+  std::getline( std::cin, inputH );
+  if( inputH != "" )
+    w = std::stoi( inputH );
 
   if( w % 2 == 0 )
     w += 1;
