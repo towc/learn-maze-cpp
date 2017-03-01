@@ -3,6 +3,9 @@ A learning experiment for c++
 
 Only works in a linux terminal, as I've hardcoded the command `clear` in the code to clear the screen
 
+# disclaimer
+This is by no means ideal and uses hacks and bad practices all over, but the purpose was for me to learn c++ syntax, not to make something useful
+
 # build
 Whilst in a linux terminal, type `./build`, which simply runs the following command, if you want to use it yourself:
 
