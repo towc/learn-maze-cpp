@@ -54,7 +54,7 @@ void Maze::gen( int w, int h ){
     
       Coordinate& head = stack[ stackIndex ];
       
-      Coordinate &cellD = availableNeighbours[ random->gen() % availNeighbourNumber ];
+      Coordinate &cellD = availableNeighbours[ random.gen() % availNeighbourNumber ];
       Coordinate cell = head + cellD;
       Coordinate hcell = head + ( cellD / 2 );
       
@@ -118,7 +118,7 @@ const Coordinate Maze::neighbourDirs[4] = {
   Coordinate( -2,  0 )
 };
 const bool Maze::WALL = true;
-Random* Maze::random = new Random();
+Random Maze::random = Random();
 
 const char Maze::charWALL = 'x';
 const char Maze::charEMPT = ' ';

@@ -25,7 +25,7 @@ class Maze {
     void checkNeighbours();
     static const Coordinate neighbourDirs[4];
     static const bool WALL;
-    static Random* random;
+    static Random random;
     static const char charWALL;
     static const char charEMPT;
     static const char charGOAL;
