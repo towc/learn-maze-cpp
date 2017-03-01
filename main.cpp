@@ -95,8 +95,6 @@ int main(){
 
   }
 
-  std::cout << security << std::endl;
-
   if( security == 0 )
     std::cout << "took too much, we were afraid the program broke" << std::endl;
   else
