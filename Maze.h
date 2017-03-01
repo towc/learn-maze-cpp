@@ -9,7 +9,6 @@ class Maze {
   public:
     Maze();
     Maze( int w, int h );
-    ~Maze();
     void gen();
     void gen( int w, int h );
     std::vector<std::vector<bool>> structure;
