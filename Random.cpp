@@ -18,6 +18,7 @@ long int Random::gen(){
 
   if( c <= 0 )
     c = -c;
+
   c = ( b % c ) * 34332 - a;
   b = ( a + c ) * 942427;
   a += c % 422342321;

@@ -3,6 +3,11 @@
 
 #include <ctime>
 
+// only because I was offline when writing the code
+// and didn't remember how to use randomness.
+// This is an awful implementation, but I wrote it
+// for it to work well enough in my case, and it does
+
 class Random {
   public:
     Random();
@@ -10,7 +15,6 @@ class Random {
     ~Random();
     long int gen();
     long int last;
-    void printABC();
 
   private:
     long int a, b, c;
