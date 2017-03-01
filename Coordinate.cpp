@@ -1,22 +1,16 @@
 #include "Coordinate.h"
 
 Coordinate::Coordinate(){
-  set( 0, 0 );
+  this->x = 0;
+  this->y = 0;
 }
 Coordinate::Coordinate( int x, int y ){
-  set( x, y );
-}
-Coordinate::~Coordinate(){}
-void Coordinate::setX( int x ){
-  this->x = x;
-}
-void Coordinate::setY( int y ){
-  this->y = y;
-}
-void Coordinate::set( int x, int y ){
   this->x = x;
   this->y = y;
 }
-Coordinate Coordinate::add( Coordinate coord ){
-  return Coordinate( this->x + coord.x, this->y + coord.y );
+Coordinate operator + ( Coordinate a, const Coordinate& b ){
+  return Coordinate( a.x + b.x, a.y + b.y );
+}
+Coordinate operator / ( Coordinate a, const int& b ){
+  return Coordinate( a.x / b, a.y / b );
 }

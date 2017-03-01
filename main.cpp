@@ -30,12 +30,12 @@ int main(){
   int w = 21, h = 21;
   string inputW, inputH;
 
-  std::cout << "maze width: ";
+  std::cout << "maze width (20): ";
   std::getline( std::cin, inputW );
-  if( inputW,empty() )
+  if( inputW.empty() )
     w = std::stoi( inputW );
 
-  std::cout << "maze height: ";
+  std::cout << "maze height (20): ";
   std::getline( std::cin, inputH );
   if( inputH.empty() )
     h = std::stoi( inputH );
@@ -46,7 +46,6 @@ int main(){
     h += 1;
 
   Maze maze( w, h );
-
 
   vector<vector<char>> map;
   Coordinate player( 1, 1 );
@@ -80,17 +79,17 @@ int main(){
 
     unsigned int dirIndex = -1;
     while( ++dirIndex < dir.length() ){
-      if( isPartOf( left, dir[ dirIndex ] ) && !maze.getCell( player.add( dirs[0] ) ) ){
-        player = player.add( dirs[ 0 ] );
+      if( isPartOf( left, dir[ dirIndex ] ) && !maze.getCell( player + dirs[0] ) ){
+        player = player + dirs[ 0 ];
       }
-      if( isPartOf( down, dir[ dirIndex ] ) && !maze.getCell( player.add( dirs[1] ) ) ){
-        player = player.add( dirs[ 1 ] );
+      if( isPartOf( down, dir[ dirIndex ] ) && !maze.getCell( player + dirs[1] ) ){
+        player = player + dirs[ 1 ];
       }
-      if( isPartOf( up, dir[ dirIndex ] ) && !maze.getCell( player.add( dirs[2] ) ) ){
-        player = player.add( dirs[ 2 ] );
+      if( isPartOf( up, dir[ dirIndex ] ) && !maze.getCell( player + dirs[2] ) ){
+        player = player + dirs[ 2 ];
       }
-      if( isPartOf( right, dir[ dirIndex ] ) && !maze.getCell( player.add( dirs[3] ) ) ){
-        player = player.add( dirs[ 3 ] );
+      if( isPartOf( right, dir[ dirIndex ] ) && !maze.getCell( player + dirs[3] ) ){
+        player = player + dirs[ 3 ];
       }
     }
 

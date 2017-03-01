@@ -2,15 +2,12 @@
 #define Coordinate_H
 
 struct Coordinate {
-  public:
-    Coordinate();
-    Coordinate( int x, int y );
-    ~Coordinate();
-    int x, y;
-    void setX( int x );
-    void setY( int y );
-    void set( int x, int y );
-    Coordinate add( Coordinate coord );
+  Coordinate();
+  Coordinate( int x, int y );
+
+  int x, y;
 };
+Coordinate operator + ( Coordinate a, const Coordinate& b );
+Coordinate operator / ( Coordinate a, const int& b );
 
 #endif

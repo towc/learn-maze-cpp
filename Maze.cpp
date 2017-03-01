@@ -12,7 +12,6 @@ Maze::Maze(){
 Maze::Maze( int w, int h ){
   gen( w, h );
 }
-Maze::~Maze(){}
 void Maze::gen(){
   gen( w, h );
 }
@@ -56,8 +55,8 @@ void Maze::gen( int w, int h ){
       Coordinate& head = stack[ stackIndex ];
       
       Coordinate &cellD = availableNeighbours[ random->gen() % availNeighbourNumber ];
-      Coordinate cell = head.add( cellD );
-      Coordinate hcell = head.add( Coordinate( cellD.x / 2, cellD.y / 2 ) );
+      Coordinate cell = head + cellD;
+      Coordinate hcell = head + ( cellD / 2 );
       
       ++stackIndex;
       stack.push_back( cell );
@@ -106,7 +105,7 @@ void Maze::checkNeighbours(){
 
   int i = 0;
   while( i != 4 ){
-    Coordinate cell = head.add( neighbourDirs[ i ] );
+    Coordinate cell = head + neighbourDirs[ i ];
 
     if( getCell( cell ) == WALL )
       availableNeighbours.push_back( neighbourDirs[ i ] );
