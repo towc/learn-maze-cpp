@@ -103,8 +103,7 @@ void Maze::checkNeighbours(){
 
   Coordinate head = stack[ stackIndex ];
 
-  int i = 0;
-  while( i != 4 ){
+  for( int i = 0; i < 4; ++i ){
     Coordinate cell = head + neighbourDirs[ i ];
 
     if( getCell( cell ) == WALL )
