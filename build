@@ -1,0 +1,3 @@
+#!/bin/bash
+
+rm main; g++ -std=c++14 -Wall -Wextra -pedantic main.cpp Maze.cpp Coordinate.cpp Random.cpp -o main; ./main
