@@ -66,9 +66,9 @@ int main(){
 
     std::cout << std::endl << " Round: " << ++round << "\t pos: [" << player.x << "," << player.y << "]" << std::endl << std::endl; 
 
-    for( int i = 0; i < w; ++i ){
+    for( int i = 0; i < h; ++i ){
       std::cout << " ";
-      for( int j = 0; j < h; ++j ){
+      for( int j = 0; j < w; ++j ){
         std::cout << map[j][i];
       }
       std::cout << std::endl;
