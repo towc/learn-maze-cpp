@@ -38,7 +38,7 @@ int main(){
   std::cout << "maze height: ";
   std::getline( std::cin, inputH );
   if( inputH != "" )
-    w = std::stoi( inputH );
+    h = std::stoi( inputH );
 
   if( w % 2 == 0 )
     w += 1;
