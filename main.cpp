@@ -32,12 +32,12 @@ int main(){
 
   std::cout << "maze width (20): ";
   std::getline( std::cin, inputW );
-  if( inputW.empty() )
+  if( !inputW.empty() )
     w = std::stoi( inputW );
 
   std::cout << "maze height (20): ";
   std::getline( std::cin, inputH );
-  if( inputH.empty() )
+  if( !inputH.empty() )
     h = std::stoi( inputH );
 
   if( w % 2 == 0 )

@@ -108,8 +108,6 @@ void Maze::checkNeighbours(){
 
     if( getCell( cell ) == WALL )
       availableNeighbours.push_back( neighbourDirs[ i ] );
-
-    ++i;
   }
 }
 
