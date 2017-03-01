@@ -10,7 +10,7 @@ This is by no means ideal and uses hacks and bad practices all over, but the pur
 Whilst in a linux terminal, type `./build`, which simply runs the following command, if you want to use it yourself:
 
 ```bash
-rm main; g++ -std=c++14 -Wall -Wextra -pedantic main.cpp Maze.cpp Coordinate.cpp Random.cpp -o main; ./main
+rm main.out; g++ -std=c++14 -Wall -Wextra -pedantic main.cpp Maze.cpp Coordinate.cpp Random.cpp -o main.out; ./main.out
 ```
 
 # sample output
