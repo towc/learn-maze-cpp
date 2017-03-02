@@ -19,7 +19,7 @@ const char down[] = { 's', 'j' };
 const char up[] = { 'w', 'k' };
 const char right[] = { 'd', 'l' };
 
-bool isPartOf( const char arr[], char val ){
+bool arrayContains( const char arr[], char val ){
   return arr[0] == val || arr[1] == val;
 }
 
@@ -79,16 +79,16 @@ int main(){
 
     unsigned int dirIndex = -1;
     while( ++dirIndex < dir.length() ){
-      if( isPartOf( left, dir[ dirIndex ] ) && !maze.getCell( player + dirs[0] ) ){
+      if( arrayContains( left, dir[ dirIndex ] ) && !maze.getCell( player + dirs[0] ) ){
         player = player + dirs[ 0 ];
       }
-      if( isPartOf( down, dir[ dirIndex ] ) && !maze.getCell( player + dirs[1] ) ){
+      if( arrayContains( down, dir[ dirIndex ] ) && !maze.getCell( player + dirs[1] ) ){
         player = player + dirs[ 1 ];
       }
-      if( isPartOf( up, dir[ dirIndex ] ) && !maze.getCell( player + dirs[2] ) ){
+      if( arrayContains( up, dir[ dirIndex ] ) && !maze.getCell( player + dirs[2] ) ){
         player = player + dirs[ 2 ];
       }
-      if( isPartOf( right, dir[ dirIndex ] ) && !maze.getCell( player + dirs[3] ) ){
+      if( arrayContains( right, dir[ dirIndex ] ) && !maze.getCell( player + dirs[3] ) ){
         player = player + dirs[ 3 ];
       }
     }
