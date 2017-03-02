@@ -3,10 +3,7 @@
 
 using std::vector;
 
-Maze::Maze(){
-  w = 20;
-  h = 20;
-
+Maze::Maze() : w(20), h(20) {
   gen();
 }
 Maze::Maze( int w, int h ){
