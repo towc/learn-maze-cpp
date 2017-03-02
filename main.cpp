@@ -25,7 +25,7 @@ bool arrayContains( const char arr[], char val ){
 
 int main(){
 
-  std::cout << "program begin" << std::endl << std::endl;
+  std::cout << "program begin \n\n";
   
   int w = 21, h = 21;
   string inputW, inputH;
@@ -56,7 +56,7 @@ int main(){
   int security = 1000;
   while( --security > 0 && !( player.x == maze.goal.x && player.y == maze.goal.y ) ){
   
-    std::cout << "start frame" << std::endl;
+    std::cout << "start frame \n";
 
     maze.fillPrintMap( map );
 
@@ -64,17 +64,17 @@ int main(){
 
     std::system( "clear" );
 
-    std::cout << std::endl << " Round: " << ++round << "\t pos: [" << player.x << "," << player.y << "]" << std::endl << std::endl; 
+    std::cout << "\n Round: " << ++round << "\t pos: [" << player.x << "," << player.y << "] \n\n"; 
 
     for( int i = 0; i < h; ++i ){
       std::cout << " ";
       for( int j = 0; j < w; ++j ){
         std::cout << map[j][i];
       }
-      std::cout << std::endl;
+      std::cout << "\n";
     }
 
-    std::cout << std::endl << " next moves (hjkl/aswd+ENTER): ";
+    std::cout << "\n next moves (hjkl/aswd+ENTER): ";
     std::cin >> dir;
 
     unsigned int dirIndex = -1;
@@ -96,11 +96,11 @@ int main(){
   }
 
   if( security == 0 )
-    std::cout << "took too much, we were afraid the program broke" << std::endl;
+    std::cout << "took too much, we were afraid the program broke \n";
   else
-    std::cout << "YOU WIN!" << std::endl;
+    std::cout << "YOU WIN! \n";
 
-  std::cout << std::endl << "program end" << std::endl;
+  std::cout << "\n program end \n";
 
   return 0;
 }
